@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import s from './MenuHeaderView.module.scss';
+import s from './menuHeaderView.module.scss';
 import logo from 'public/mainLogo.png';
 import profile from 'public/profile.png';
 import heart from 'public/heart.png';
