@@ -4,7 +4,7 @@ import CatalogPageView from "./CatalogPageView/CatalogPageView"
 export const metadata = {
     title: 'Lady Shery - Каталог',
     description: 'Информация про Lady Shery',
-    keywords: ['Lady Shery', 'Lady', 'Shery', 'О нас', 'Интернет магазин', 'Магазин', 'магазин', 'Корзина', 'корзина', 'купить'],
+    keywords: ['Lady Shery', 'Lady', 'Shery', 'О нас', 'Интернет магазин', 'Магазин', 'магазин', 'Корзина', 'корзина', 'купить', 'контакты'],
 };
 
 interface ICatalogProps {
