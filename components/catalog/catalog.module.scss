@@ -1,6 +1,6 @@
 .catalog {
     width: 300px;
-    height: calc(100% - 121px);
+    height: calc(100% - 120px);
     overflow-y: scroll;
     border-right: 1px solid rgba(194, 194, 194, 0.692);
     animation-duration: 1s;
@@ -8,7 +8,7 @@
     animation-iteration-count: 1;
     background-color: white;
     position: absolute;
-    top: 122px;
+    top: 121px;
     z-index: 999;
     left: 0;
     & .catalogElement {
