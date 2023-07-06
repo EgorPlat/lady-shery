@@ -10,7 +10,7 @@ import { checkIsMobile } from '@/helper/checkIsMobile';
 export const metadata = {
   title: 'Lady Shery - Главная',
   description: 'Оффициальный магазин Lady Shery',
-  keywords: ['Lady Shery', 'Lady', 'Shery', 'Главная', 'Интернет магазин', 'Магазин', 'магазин'],
+  keywords: ['Lady Shery', 'Lady', 'Shery', 'Главная', 'Интернет магазин', 'Магазин', 'магазин']
 }
 
 export default function RootLayout({
