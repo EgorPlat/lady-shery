@@ -31,6 +31,7 @@ async function getProductsData(categoryId: number) {
 export default async function Catalog({ params: { categoryId }}: ICatalogProps) {
 
     const productsInfo = await getProductsData(categoryId);
+    
     return (
         <CatalogPageView
             productsInfo={productsInfo}
