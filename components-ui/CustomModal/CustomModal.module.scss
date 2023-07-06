@@ -1,0 +1,149 @@
+.customModal {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.238);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & .customModalContent {
+        font-size: 24px;
+        padding: 15px;
+        border-radius: 5px;
+        max-height: 400px;
+        max-width: 1000px;
+        background-color: white;
+        & .customModalTitle {
+            display: grid;
+            grid-template-columns: 95% 5%;
+            font-size: 16px;
+            min-height: 20px;
+            & .customModalClose {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                width: 25px;
+                height: 25px;
+                background-color: black ;
+                color: white;
+                border-radius: 50%;
+                font-weight: 600;
+                border: none;
+            }
+            & .customModalClose:hover {
+                cursor: pointer;
+                background-color: rgba(255, 200, 0, 0.956);
+                color: black;
+            }
+        }
+        & .customModalChildrenContent {
+            max-height: 450px;
+            max-width: 1000px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        & .customModalChildrenContent::-webkit-scrollbar {
+            width: 5px;               /* ширина scrollbar */
+        }
+        & .customModalChildrenContent::-webkit-scrollbar-track {
+            background: transparent;        /* цвет дорожки */
+        }
+        & .customModalChildrenContent::-webkit-scrollbar-thumb {
+            background-color: rgba(44, 44, 44, 0.537);    /* цвет плашки */
+        }
+    }
+    & .manageCustomModal {
+        & button {
+            border-radius: 5px;
+            border: none;
+            color: white;
+            padding: 5px;
+            font-size: 15px;
+            margin: 1%;
+        }
+        & .confirmBtn {
+            cursor: pointer;
+            width: 110px;
+            min-height: 30px;
+            background-color: rgb(15, 129, 223);
+        }
+        & .cancelBtn {
+            cursor: pointer;
+            width: 110px;
+            min-height: 30px;
+            background-color: black;
+        }
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .customModal {
+        & .customModalContent {
+            width: 700px;
+            max-height: 600px;
+            font-size: 22px;
+            //grid-template-rows: 45px 450px 65px;
+            & .customModalTitle {
+                font-size: 26px;
+                & .customModalClose {
+                    text-align: right;
+                    & button {
+                        width: 25px;
+                        height: 25px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1536px) {
+    .customModal {
+        & .customModalContent {
+            width: 500px;
+            font-size: 16px;
+            & .customModalTitle {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .customModal {
+        & .customModalContent {
+            width: 500px;
+            & .customModalTitle {
+                font-size: 21px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .customModal {
+        & .customModalContent {
+            width: 500px;
+            & .customModalTitle {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .customModal {
+        & .customModalContent {
+            width: 400px;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .customModal {
+        & .customModalContent {
+            width: 350px
+        }
+    }
+}

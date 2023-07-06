@@ -1,0 +1,29 @@
+.shopsMap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 25px;
+    padding-top: 25px;
+    flex-direction: column;
+    height: 100%;
+    & .title {
+        text-align: center;
+    }
+    & .ymap {
+        width: 99%;
+        height: 500px
+    }
+}
+.placemark {
+    width: 120px;
+    height: 120px;
+}
+
+@media screen and (max-width: 760px) {
+    .shopsMap {
+        & .ymap {
+            height: 550px;
+        }
+    }
+}

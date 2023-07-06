@@ -1,0 +1,35 @@
+.catalog {
+    width: 300px;
+    height: calc(100% - 121px);
+    overflow-y: scroll;
+    border-right: 1px solid rgba(194, 194, 194, 0.692);
+    animation-duration: 1s;
+    animation-name: smoothTransition;
+    animation-iteration-count: 1;
+    background-color: white;
+    position: absolute;
+    top: 122px;
+    z-index: 999;
+    left: 0;
+    & .catalogElement {
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    & .catalogElement:hover {
+        background-color: rgba(128, 128, 128, 0.223);
+    }
+}
+
+@keyframes smoothTransition {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0px;
+    }
+}

@@ -1,0 +1,168 @@
+.catalog {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    row-gap: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 100%;
+    & .catalogTitle {
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    & .catalogFilters {
+        display: flex;
+    }
+    & .catalogList {
+        margin: 0 auto;
+        max-width: 1450px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 15px;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        & .catalogProductCard {
+            position: relative;
+            width: 290px;
+            height: 410px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            & .productActions {
+                position: absolute;
+                bottom: 0px;
+                min-height: 60px;
+                background-color: rgba(249, 249, 249, 0.908);
+                border-radius: 15px;
+                width: 100%;
+                display: none;
+                & .sizes {
+                    display: flex;
+                    column-gap: 5px;
+                    & .size {
+                        padding: 2px;
+                        border-radius: 10px;
+                    }
+                    & .size:hover {
+                        cursor: pointer;
+                        background-color: rgba(128, 128, 128, 0.245);
+                    }
+                }
+                & .openMoreInfo {
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+                & .openMoreInfo:hover {
+                    background-color: rgba(128, 128, 128, 0.245);
+                }
+                & .productPrice {
+
+                }
+            }
+        }
+        & .catalogProductCard:hover .productActions {
+            animation-name: smoothShow;
+            animation-duration: 1s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            row-gap: 5px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1520px) {
+    .catalog {
+        & .catalogList {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+@media screen and (max-width: 1060px) {
+    .catalog {
+        & .catalogList {
+            margin: 0;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .catalog {
+        padding-left: 10px;
+        padding-right: 10px;
+        & .catalogList {
+            grid-template-columns: 1fr 1fr;
+            & .catalogProductCard {
+                width: 100%;
+                height: 380px;
+                & .productActions {
+                    font-size: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    justify-items: center;
+                }
+            }
+            & .catalogProductCard:hover .productActions {
+                animation: none;
+                row-gap: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .catalog {
+        & .catalogList {
+            & .catalogProductCard {
+                border-radius: 10px;
+                width: 100%;
+                height: 320px;
+                margin-bottom: 5px;
+                & .productActions {
+                    border-radius: 10px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .catalog {
+        & .catalogList {
+            column-gap: 5px;
+            & .catalogProductCard {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .catalog {
+        & .catalogList {
+            & .catalogProductCard {
+                width: 100%;
+                height: 260px;
+            }
+        }
+    }
+}
+
+@keyframes smoothShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

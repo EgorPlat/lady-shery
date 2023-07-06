@@ -1,0 +1,30 @@
+.catalogFilters {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 35px;
+    row-gap: 10px;
+    & .select {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .catalogFilters {
+        column-gap: 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .catalogFilters {
+        column-gap: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .catalogFilters {
+        & .select {
+            width: 48%
+        }
+    }
+}

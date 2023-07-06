@@ -1,0 +1,20 @@
+.home {
+    & .block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 15px;
+        column-gap: 15px;
+        & .infoBlock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            border: 1px solid black;
+            width: 50%;
+            height: 500px;
+            border-radius: 15px;
+        }
+    } 
+}
