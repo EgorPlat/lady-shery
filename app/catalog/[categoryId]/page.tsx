@@ -11,7 +11,7 @@ interface ICatalogProps {
     params: {
         categoryId: any
     }
-};
+}
 
 async function getProductsData(categoryId: number) {
     const response = await fetch(baseURL + 'product/getProductsByCategory', {
@@ -31,6 +31,7 @@ async function getProductsData(categoryId: number) {
 export default async function Catalog({ params: { categoryId }}: ICatalogProps) {
 
     const productsInfo = await getProductsData(categoryId);
+    // test
     return (
         <CatalogPageView
             productsInfo={productsInfo}
