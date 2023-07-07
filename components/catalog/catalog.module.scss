@@ -2,13 +2,12 @@
     width: 300px;
     height: calc(100% - 120px);
     overflow-y: scroll;
-    border-right: 1px solid rgba(194, 194, 194, 0.692);
     animation-duration: 1s;
     animation-name: smoothTransition;
     animation-iteration-count: 1;
     background-color: white;
     position: absolute;
-    top: 121px;
+    top: 120px;
     z-index: 999;
     left: 0;
     & .catalogElement {
@@ -23,6 +22,13 @@
     & .catalogElement:hover {
         background-color: rgba(128, 128, 128, 0.223);
     }
+}
+.catalog::-webkit-scrollbar-track {
+    background: transparent        /* цвет зоны отслеживания */
+}
+  
+.catalog::-webkit-scrollbar-thumb {
+    background: transparent;
 }
 
 @keyframes smoothTransition {
