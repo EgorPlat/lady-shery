@@ -55,7 +55,7 @@
 }
 @media screen and (max-width: 760px) {
     .menuHeader {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.5fr;
         & .menuActions {
             column-gap: 30px;
         }
