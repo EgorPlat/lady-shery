@@ -1,5 +1,7 @@
 import { baseURL } from "@/configs/axios";
-import CatalogPageView from "./CatalogPageView/CatalogPageView"
+import { Suspense } from "react";
+import { CustomLoader } from "@/components-ui/CustomLoader/CustomLoader";
+import CatalogPageView from "./CatalogPageView/CatalogPageView";
 
 export const metadata = {
     title: 'Lady Shery - Каталог',
@@ -31,10 +33,12 @@ async function getProductsData(categoryId: number) {
 export default async function Catalog({ params: { categoryId }}: ICatalogProps) {
 
     const productsInfo = await getProductsData(categoryId);
-    // test
+
     return (
-        <CatalogPageView
-            productsInfo={productsInfo}
-        />
+        <Suspense fallback={<CustomLoader />}>
+            <CatalogPageView
+                productsInfo={productsInfo}
+            />
+        </Suspense>
     )
 }

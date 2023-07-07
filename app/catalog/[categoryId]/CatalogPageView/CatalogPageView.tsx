@@ -1,3 +1,4 @@
+'use-client';
 import { IProduct } from '@/interfaces/product';
 import { baseURL } from '@/configs/axios';
 import { ICategory } from '@/interfaces/category';
@@ -8,11 +9,10 @@ interface ICatalogPageProps {
     productsInfo: {
         categoryData: ICategory,
         productsData: IProduct[]
-    }
+    },
 };
 
 export default function CatalogPageView({ productsInfo }: ICatalogPageProps) {
-
     return (
         <div className={s.catalog}>
             <div className={s.catalogTitle}>
@@ -46,7 +46,9 @@ export default function CatalogPageView({ productsInfo }: ICatalogPageProps) {
                                         ))}
                                     </div>
                                     <div className={s.productPrice}>1000 руб</div>
-                                    <div className={s.openMoreInfo}>Посмотреть</div>
+                                    <div 
+                                        className={s.openMoreInfo}
+                                    >Посмотреть</div>
                                 </div>
                             </div>
                         )

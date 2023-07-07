@@ -3,16 +3,16 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
-    row-gap: 25px;
-    padding-top: 25px;
+    row-gap: 15px;
+    padding-top: 15px;
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - 15px);
     & .title {
         text-align: center;
     }
     & .ymap {
         width: 99%;
-        height: 500px
+        height: 600px
     }
 }
 .placemark {

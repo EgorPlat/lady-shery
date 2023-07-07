@@ -15,6 +15,7 @@
         justify-items: left;
         text-align: left;
         justify-content: left;
+        align-items: center;
         cursor: pointer;
         column-gap: 40px;
         & .location {
@@ -32,6 +33,9 @@
         display: flex;
         cursor: pointer;
         column-gap: 80px;
+        justify-items: left;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -57,7 +61,7 @@
         }
         & .menuInfo {
             padding-left: 5px;
-            column-gap: 20px;
+            column-gap: 10px;
         }
     }
 }

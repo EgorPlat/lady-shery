@@ -1,7 +1,9 @@
 .about {
+    max-width: 1450px;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    margin: auto    ;
     height: 100%;
     row-gap: 10px;
     & .title {

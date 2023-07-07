@@ -49,14 +49,14 @@ export default function MenuHeaderView(props: {
                     { !props.isMobile && 'Каталог'}
                 </div>
                 <div className={s.location} onClick={props.handleShopsClick}>
-                    { !props.isMobile &&
+
                     <Image
                         alt='Локация'
                         src={location}
                         width={30}
                         height={30}
                     />
-                    }
+                    
                     { !props.isMobile && 'Магазины'}
                 </div>
             </div>

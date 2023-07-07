@@ -1,20 +1,123 @@
 .home {
-    & .block {
-        display: flex;
-        align-items: center;
+    max-width: 1450px;
+    margin: auto;
+    display: grid;
+    row-gap: 15px;
+    & .title {
+        text-align: center;
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    & .blockSlider {
+        animation: smoothShown 2s 1;
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         justify-content: center;
         justify-items: center;
-        padding: 15px;
         column-gap: 15px;
-        & .infoBlock {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            justify-items: center;
-            border: 1px solid black;
-            width: 50%;
-            height: 500px;
-            border-radius: 15px;
+        & .mainImage {
+            cursor: pointer;       
+            animation: autoSwiper 6s infinite forwards;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
         }
     } 
+    & .blockScroll {
+        animation: smoothShown 4s 1;
+        display: flex;
+        column-gap: 15px;
+        padding-left: 60px;
+        padding-right: 15px;
+        justify-content: center;
+        align-items: center;
+        overflow-x: scroll;
+        & .mainScrollImage {
+            cursor: pointer;
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            border: 1px solid rgb(123, 123, 123);
+        }
+        & .mainScrollImage:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.centerContainer {
+    display: grid;
+    justify-items: center;
+    row-gap: 3px;
+
+}
+.home .blockSlider::-webkit-scrollbar-track {
+    background: transparent        /* цвет зоны отслеживания */
+}
+  
+.home .blockSlider::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.home .blockScroll::-webkit-scrollbar-track {
+    background: transparent        /* цвет зоны отслеживания */
+}
+  
+.home .blockScroll::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+@keyframes smoothShown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 840px) {
+    .home {
+        & .title {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        & .title {
+            font-size: 18px;
+        }
+        & .blockSlider {
+            overflow-x: scroll;
+            display: flex;
+            justify-content: space-between;
+            & .mainImage {
+                height: 415px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 475px) {
+    .home {
+        & .blockSlider {
+            & .mainImage {
+                height: 335px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 355px) {
+    .home {
+        & .blockSlider {
+            & .mainImage {
+                height: 275px;
+            }
+        }
+    }
 }
