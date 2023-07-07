@@ -10,45 +10,45 @@ import s from './page.module.scss'
 export default function Home() {
   return (
     <div className={s.home}>
-      <div className={s.title}>Актуальные и новые коллекции</div>
-      <div className={s.blockSlider}>
-        <Image 
-          className={s.mainImage}
-          src={main1} 
-          alt="Главное изображение" 
-        />
-        <Image 
-          className={s.mainImage}
-          src={main2} 
-          alt="Главное изображение" 
-        />
-      </div>
-      <div className={s.blockScroll}>
-        <div className={s.centerContainer}>
-          <Image 
-            className={s.mainScrollImage}
-            src={sales} 
-            alt="Категория" 
-          />
-          Акции
+        <div className={s.title}>Актуальные и новые коллекции</div>
+        <div className={s.blockSlider}>
+            <Image 
+              className={s.mainImage}
+              src={main1} 
+              alt="Главное изображение" 
+            />
+            <Image 
+              className={s.mainImage}
+              src={main2} 
+              alt="Главное изображение" 
+            />
         </div>
-        <div className={s.centerContainer}>
-          <Image 
-            className={s.mainScrollImage}
-            src={shorts} 
-            alt="Категория" 
-          />
-          Шорты
+        <div className={s.blockScroll}>
+            <div className={s.centerContainer}>
+                <Image 
+                  className={s.mainScrollImage}
+                  src={sales} 
+                  alt="Категория" 
+                />
+                Акции
+            </div>
+            <div className={s.centerContainer}>
+                <Image 
+                  className={s.mainScrollImage}
+                  src={shorts} 
+                  alt="Категория" 
+                />
+                Шорты
+            </div>
+            <div className={s.centerContainer}>
+                <Image 
+                  className={s.mainScrollImage}
+                  src={news} 
+                  alt="Категория" 
+                />
+                Новое
+            </div>
         </div>
-        <div className={s.centerContainer}>
-          <Image 
-            className={s.mainScrollImage}
-            src={news} 
-            alt="Категория" 
-          />
-          Новое
-        </div>
-      </div>
     </div>
   )
 }

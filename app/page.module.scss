@@ -17,8 +17,6 @@
         padding-right: 15px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-content: center;
-        justify-items: center;
         column-gap: 15px;
         & .mainImage {
             cursor: pointer;       
@@ -31,8 +29,9 @@
     & .blockScroll {
         animation: smoothShown 4s 1;
         display: flex;
+        justify-content: space-between;
         column-gap: 15px;
-        padding-left: 60px;
+        padding-left: 15px;
         padding-right: 15px;
         justify-content: center;
         align-items: center;
@@ -55,21 +54,6 @@
     justify-items: center;
     row-gap: 3px;
 
-}
-.home .blockSlider::-webkit-scrollbar-track {
-    background: transparent        /* цвет зоны отслеживания */
-}
-  
-.home .blockSlider::-webkit-scrollbar-thumb {
-    background: transparent;
-}
-
-.home .blockScroll::-webkit-scrollbar-track {
-    background: transparent        /* цвет зоны отслеживания */
-}
-  
-.home .blockScroll::-webkit-scrollbar-thumb {
-    background: transparent;
 }
 
 @keyframes smoothShown {
@@ -101,6 +85,12 @@
                 height: 415px;
             }
         }
+        & .blockScroll {
+            & .mainScrollImage {
+                width: 125px;
+                height: 125px;
+            }
+        }
     }
 }
 @media screen and (max-width: 475px) {
@@ -110,6 +100,12 @@
                 height: 335px;
             }
         }
+        & .blockScroll {
+            & .mainScrollImage {
+                width: 100px;
+                height: 100px;
+            }
+        }
     }
 }
 @media screen and (max-width: 355px) {
@@ -117,6 +113,12 @@
         & .blockSlider {
             & .mainImage {
                 height: 275px;
+            }
+        }
+        & .blockScroll {
+            & .mainScrollImage {
+                width: 70px;
+                height: 70px;
             }
         }
     }

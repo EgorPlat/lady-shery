@@ -23,13 +23,6 @@
         background-color: rgba(128, 128, 128, 0.223);
     }
 }
-.catalog::-webkit-scrollbar-track {
-    background: transparent        /* цвет зоны отслеживания */
-}
-  
-.catalog::-webkit-scrollbar-thumb {
-    background: transparent;
-}
 
 @keyframes smoothTransition {
     from {
